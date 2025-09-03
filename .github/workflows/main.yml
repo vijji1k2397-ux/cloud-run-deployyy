@@ -14,11 +14,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Step 2: Authenticate with Google Cloud
+      # Step 2: Authenticate to Google Cloud
       - name: Authenticate to Google Cloud
         uses: google-github-actions/auth@v2
         with:
-          credentials_json: ${{ secrets.MY_SECRET_KEY }}
+          credentials_json: ${{ secrets.MY_SECRET_CLD_KEY }}
+          project_id: deploy-cloud-01
 
       # Step 3: Set up gcloud
       - name: Set up Google Cloud SDK
@@ -49,4 +50,5 @@ jobs:
             --region us-central1 \
             --platform managed \
             --allow-unauthenticated \
-            --project deploy-cloud-01
+            --project deploy-cloud-01 \
+            --service-account cloud-run-runtime@deploy-cloud-01.iam.gserviceaccount.com
