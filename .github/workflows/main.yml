@@ -51,4 +51,5 @@ jobs:
             --platform managed \
             --allow-unauthenticated \
             --project deploy-cloud-01 \
-            --service-account cloud-run-runtime@deploy-cloud-01.iam.gserviceaccount.com
+            --service-account cloud-run-runtime@deploy-cloud-01.iam.gserviceaccount.com \
+            --timeout=600s
