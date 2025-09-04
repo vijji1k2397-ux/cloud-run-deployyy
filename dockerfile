@@ -1,5 +1,5 @@
-# Let's get the base image of node14
-FROM node:14
+# Let's get the base image of node18
+FROM node:18
 # Create app directory
 WORKDIR /usr/src/app
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
