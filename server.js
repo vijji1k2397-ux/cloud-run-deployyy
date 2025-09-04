@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 app.get('/', (req, res) => {
-  res.send('Hello from Cloud Run!');
+  res.send('Hello, Deploying the cloud run service using github actions!');
 });
 
 const port = process.env.PORT || 8080;
